@@ -359,11 +359,11 @@ button{
 
 }
 
-.hero-slider{
-
-    width:100%;
-    height:100%;
-
+.hero-slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
 .slide{
