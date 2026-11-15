@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Discover Britain's most iconic attractions, historic landmarks and unforgettable places with ExploreUK.">
+
+    <title>UK Attractions | ExploreUK</title>
+
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <!-- Font Awesome -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+
+    <!-- Main CSS -->
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<!--==================================
+            HEADER
+===================================-->
+
+<header class="header">
+
+    <div class="container">
+
+        <nav class="navbar">
+
+            <!-- LOGO -->
+
+            <a href="index.html" class="logo">
+                Explore<span>UK</span>
+            </a>
+
+
+            <!-- NAVIGATION -->
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="destinations.html">
+                        Destinations
+                    </a>
+                </li>
+
+                <li>
+                    <a href="attractions.html" class="active">
+                        Attractions
+                    </a>
+                </li>
+
+                <li>
+                    <a href="experiences.html">
+                        Experiences
+                    </a>
+                </li>
+
+                <li>
+                    <a href="guide.html">
+                        Travel Guide
+                    </a>
+                </li>
+
+                <li>
+                    <a href="blog.html">
+                        Blog
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <!-- RIGHT SIDE -->
+
+            <div class="nav-right">
+
+                <!-- Search -->
+
+                <button
+                    class="search-btn"
+                    type="button"
+                    aria-label="Search">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                </button>
+
+
+                <!-- Dark Mode -->
+
+                <button
+                    class="theme-btn"
+                    type="button"
+                    aria-label="Toggle dark mode">
+
+                    <i class="fa-solid fa-moon"></i>
+
+                </button>
+
+
+                <!-- Plan Trip -->
+
+                <a
+                    href="guide.html"
+                    class="book-btn">
+
+                    Plan Your Trip
+
+                </a>
+
+
+                <!-- Mobile Menu -->
+
+                <button
+                    class="menu-btn"
+                    type="button"
+                    aria-label="Open menu">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+            </div>
+
+        </nav>
+
+    </div>
+
+</header>
+
+<!--==================================
+        ATTRACTIONS HERO
+===================================-->
+
+<section class="attraction-hero">
+
+    <div class="attraction-hero-overlay"></div>
+
+    <div class="container attraction-hero-content">
+
+        <span class="attraction-badge">
+            <i class="fa-solid fa-landmark"></i>
+            Iconic Britain
+        </span>
+
+        <h1>
+            Discover Britain's
+            <span>Iconic Attractions</span>
+        </h1>
+
+        <p>
+            From legendary landmarks and royal palaces to ancient
+            monuments and unforgettable city experiences, explore
+            the places that define Britain.
+        </p>
+
+        <div class="attraction-breadcrumb">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <i class="fa-solid fa-chevron-right"></i>
+
+            <span>
+                Attractions
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!--==================================
+        ATTRACTIONS INTRO
+===================================-->
+
+<section class="attraction-intro">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>
+                Must-See Places
+            </span>
+
+            <h2>
+                Britain's Most
+                <span>Iconic Attractions</span>
+            </h2>
+
+            <p>
+                Explore famous landmarks, historic treasures and
+                unforgettable places across the United Kingdom.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!--==================================
+        ATTRACTION SEARCH & FILTER
+===================================-->
+
+<section class="attraction-filter-section">
+
+    <div class="container">
+
+        <!-- Search -->
+
+        <div class="attraction-search">
+
+            <div class="attraction-search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="attractionSearch"
+                    placeholder="Search attractions..."
+                >
+
+            </div>
+
+        </div>
+
+
+        <!-- Filters -->
+
+        <div class="attraction-filters">
+
+            <button
+                class="attraction-filter active"
+                data-category="all">
+
+                All Attractions
+
+            </button>
+
+
+            <button
+                class="attraction-filter"
+                data-category="landmarks">
+
+                Landmarks
+
+            </button>
+
+
+            <button
+                class="attraction-filter"
+                data-category="royal">
+
+                Royal
+
+            </button>
+
+
+            <button
+                class="attraction-filter"
+                data-category="historic">
+
+                Historic
+
+            </button>
+
+
+            <button
+                class="attraction-filter"
+                data-category="experience">
+
+                Experiences
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!--==================================
+        ATTRACTIONS GRID
+===================================-->
+
+<section class="all-attractions">
+
+    <div class="container">
+
+        <div class="attraction-grid">
+
+
+            <!-- Attraction 1 — Big Ben -->
+
+            <article class="attraction-card"
+                data-category="landmarks"
+                data-name="big ben">
+
+                <div class="attraction-image">
+
+                    <img
+                        src="images/attractions/big-ben.jpg - Copy.jpg"
+                        alt="Big Ben London"
+                        loading="lazy"
+                    >
+
+                    <span class="attraction-category">
+                        Landmark
+                    </span>
+
+                </div>
+
+                <div class="attraction-content">
+
+                    <span class="attraction-location">
+                        <i class="fa-solid fa-location-dot"></i>
+                        London, England
+                    </span>
+
+                    <h3>Big Ben</h3>
+
+                    <p>
+                        Discover one of London's most famous landmarks
+                        and an iconic symbol of Britain.
+                    </p>
+
+                    <a href="#" class="attraction-link">
+                        Explore Big Ben
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- Attraction 2 — Tower Bridge -->
+
+            <article class="attraction-card"
+                data-category="landmarks"
+                data-name="tower bridge">
+
+                <div class="attraction-image">
+
+                    <img
+                        src="images/attractions/tower-bridge.jpg.jpg"
+                        alt="Tower Bridge London"
+                        loading="lazy"
+                    >
+
+                    <span class="attraction-category">
+                        Landmark
+                    </span>
+
+                </div>
+
+                <div class="attraction-content">
+
+                    <span class="attraction-location">
+                        <i class="fa-solid fa-location-dot"></i>
+                        London, England
+                    </span>
+
+                    <h3>Tower Bridge</h3>
+
+                    <p>
+                        Walk across London's legendary bridge and enjoy
+                        spectacular views of the River Thames.
+                    </p>
+
+                    <a href="#" class="attraction-link">
+                        Explore Tower Bridge
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- Attraction 3 — Buckingham Palace -->
+
+            <article class="attraction-card"
+                data-category="royal"
+                data-name="buckingham palace">
+
+                <div class="attraction-image">
+
+                    <img
+                        src="images/attractions/buckingham-palace.jpg.jpg"
+                        alt="Buckingham Palace London"
+                        loading="lazy"
+                    >
+
+                    <span class="attraction-category">
+                        Royal
+                    </span>
+
+                </div>
+
+                <div class="attraction-content">
+
+                    <span class="attraction-location">
+                        <i class="fa-solid fa-location-dot"></i>
+                        London, England
+                    </span>
+
+                    <h3>Buckingham Palace</h3>
+
+                    <p>
+                        Experience the magnificent royal residence and
+                        famous Changing of the Guard ceremony.
+                    </p>
+
+                    <a href="#" class="attraction-link">
+                        Explore Palace
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- Attraction 4 — London Eye -->
+
+            <article class="attraction-card"
+                data-category="experience"
+                data-name="london eye">
+
+                <div class="attraction-image">
+
+                    <img
+                        src="images/attractions/london-eye.jpg.jpg"
+                        alt="London Eye"
+                        loading="lazy"
+                    >
+
+                    <span class="attraction-category">
+                        Experience
+                    </span>
+
+                </div>
+
+                <div class="attraction-content">
+
+                    <span class="attraction-location">
+                        <i class="fa-solid fa-location-dot"></i>
+                        London, England
+                    </span>
+
+                    <h3>London Eye</h3>
+
+                    <p>
+                        Enjoy breathtaking panoramic views across London
+                        from this famous observation wheel.
+                    </p>
+
+                    <a href="#" class="attraction-link">
+                        Explore London Eye
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- Attraction 5 — Stonehenge -->
+
+            <article class="attraction-card"
+                data-category="historic"
+                data-name="stonehenge">
+
+                <div class="attraction-image">
+
+                    <img
+                        src="images/attractions/stonehenge.jpg.jpg"
+                        alt="Stonehenge England"
+                        loading="lazy"
+                    >
+
+                    <span class="attraction-category">
+                        Historic
+                    </span>
+
+                </div>
+
+                <div class="attraction-content">
+
+                    <span class="attraction-location">
+                        <i class="fa-solid fa-location-dot"></i>
+                        Wiltshire, England
+                    </span>
+
+                    <h3>Stonehenge</h3>
+
+                    <p>
+                        Step into ancient history and discover one of
+                        Britain's most mysterious prehistoric monuments.
+                    </p>
+
+                    <a href="#" class="attraction-link">
+                        Explore Stonehenge
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- Attraction 6 — Windsor Castle -->
+
+            <article class="attraction-card"
+                data-category="royal"
+                data-name="windsor castle">
+
+                <div class="attraction-image">
+
+                    <img
+                        src="images/attractions/windsor-castle.jpg.jpg"
+                        alt="Windsor Castle"
+                        loading="lazy"
+                    >
+
+                    <span class="attraction-category">
+                        Royal
+                    </span>
+
+                </div>
+
+                <div class="attraction-content">
+
+                    <span class="attraction-location">
+                        <i class="fa-solid fa-location-dot"></i>
+                        Windsor, England
+                    </span>
+
+                    <h3>Windsor Castle</h3>
+
+                    <p>
+                        Explore centuries of royal history at one of
+                        Britain's most famous castles.
+                    </p>
+
+                    <a href="#" class="attraction-link">
+                        Explore Windsor Castle
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+<!--==================================
+        ATTRACTION CTA
+===================================-->
+
+<section class="attraction-cta">
+
+    <div class="container">
+
+        <div class="attraction-cta-content">
+
+            <span>
+                Your British Adventure Awaits
+            </span>
+
+            <h2>
+                Ready to Explore
+                <strong>Britain?</strong>
+            </h2>
+
+            <p>
+                Discover iconic landmarks, royal palaces,
+                ancient monuments and unforgettable experiences
+                across the United Kingdom.
+            </p>
+
+            <a href="guide.html" class="attraction-cta-btn">
+                Start Planning Your Trip
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!--==================================
+            FOOTER
+===================================-->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="logo">
+                    Explore<span>UK</span>
+                </a>
+
+                <p>
+                    Your trusted guide to discovering Britain's
+                    cities, culture, history and unforgettable experiences.
+                </p>
+
+                <div class="footer-social">
+
+                    <a href="#" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" aria-label="Pinterest">
+                        <i class="fa-brands fa-pinterest-p"></i>
+                    </a>
+
+                    <a href="#" aria-label="YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Explore</h4>
+
+                <a href="index.html">Home</a>
+
+                <a href="destinations.html">Destinations</a>
+
+                <a href="attractions.html">Attractions</a>
+
+                <a href="experiences.html">Experiences</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Travel</h4>
+
+                <a href="guide.html">Travel Guide</a>
+
+                <a href="blog.html">Travel Blog</a>
+
+                <a href="#">Travel Tips</a>
+
+                <a href="#">UK Itineraries</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Contact</h4>
+
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    hello@exploreuk.com
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    United Kingdom
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 ExploreUK. All Rights Reserved.
+            </p>
+
+            <div>
+
+                <a href="#">Privacy Policy</a>
+
+                <a href="#">Terms & Conditions</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- JavaScript -->
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>

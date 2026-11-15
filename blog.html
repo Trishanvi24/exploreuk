@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Explore UK travel stories, destination guides, travel tips and inspiring experiences with ExploreUK.">
+
+    <title>UK Travel Blog | ExploreUK</title>
+
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <!-- Font Awesome -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+
+    <!-- Main CSS -->
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/blog.css">
+
+</head>
+
+
+<body>
+
+
+<!--==================================
+            HEADER
+===================================-->
+
+<header class="header">
+
+    <div class="container">
+
+        <nav class="navbar">
+
+
+            <!-- Logo -->
+
+            <a href="index.html" class="logo">
+                Explore<span>UK</span>
+            </a>
+
+
+            <!-- Navigation -->
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="destinations.html">
+                        Destinations
+                    </a>
+                </li>
+
+                <li>
+                    <a href="attractions.html">
+                        Attractions
+                    </a>
+                </li>
+
+                <li>
+                    <a href="experiences.html">
+                        Experiences
+                    </a>
+                </li>
+
+                <li>
+                    <a href="guide.html">
+                        Travel Guide
+                    </a>
+                </li>
+
+                <li>
+                    <a href="blog.html" class="active">
+                        Blog
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <!-- Right Navigation -->
+
+            <div class="nav-right">
+
+                <button
+                    class="search-btn"
+                    aria-label="Search">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                </button>
+
+
+                <button
+                    class="theme-btn"
+                    aria-label="Theme">
+
+                    <i class="fa-solid fa-moon"></i>
+
+                </button>
+
+
+                <a
+                    href="guide.html"
+                    class="book-btn">
+
+                    Plan Your Trip
+
+                </a>
+
+
+                <button
+                    class="menu-btn"
+                    aria-label="Menu">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+            </div>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!--==================================
+            BLOG HERO
+===================================-->
+
+<section class="blog-hero">
+
+    <div class="blog-hero-overlay"></div>
+
+    <div class="container blog-hero-content">
+
+        <span class="blog-badge">
+
+            <i class="fa-solid fa-feather"></i>
+
+            Explore Britain
+
+        </span>
+
+
+        <h1>
+
+            Stories From
+            <span>Britain</span>
+
+        </h1>
+
+
+        <p>
+
+            Discover inspiring destinations, local experiences,
+            practical travel tips and stories from across the UK.
+
+        </p>
+
+
+        <div class="blog-breadcrumb">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <i class="fa-solid fa-chevron-right"></i>
+
+            <span>
+                Blog
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!--==================================
+        BLOG INTRO
+===================================-->
+
+<section class="blog-intro">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>
+                Travel Inspiration
+            </span>
+
+            <h2>
+
+                Discover Britain
+                <span>Through Stories</span>
+
+            </h2>
+
+            <p>
+
+                From iconic cities and historic landmarks to
+                hidden gems and unforgettable experiences,
+                find inspiration for your next UK adventure.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!--==================================
+        BLOG FILTER & SEARCH
+===================================-->
+
+<section class="blog-filter-section">
+
+    <div class="container">
+
+        <div class="blog-filter-header">
+
+            <div class="blog-filter-title">
+
+                <span class="section-label">
+                    Explore Our Stories
+                </span>
+
+                <h2>
+                    Find Your Next
+                    <span>UK Adventure</span>
+                </h2>
+
+                <p>
+                    Search our travel stories, destination guides,
+                    food experiences and helpful UK travel tips.
+                </p>
+
+            </div>
+
+
+            <!-- SEARCH BOX -->
+
+            <div class="blog-search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="blogSearch"
+                    placeholder="Search travel stories..."
+                    autocomplete="off"
+                >
+
+                <button
+                    type="button"
+                    id="clearSearch"
+                    aria-label="Clear search">
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- CATEGORY FILTERS -->
+
+        <div
+            class="blog-filters"
+            id="blogFilters">
+
+            <button
+                type="button"
+                class="blog-filter-btn active"
+                data-filter="all">
+
+                <i class="fa-solid fa-border-all"></i>
+
+                All Stories
+
+            </button>
+
+
+            <button
+                type="button"
+                class="blog-filter-btn"
+                data-filter="destinations">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                Destinations
+
+            </button>
+
+
+            <button
+                type="button"
+                class="blog-filter-btn"
+                data-filter="travel-tips">
+
+                <i class="fa-solid fa-lightbulb"></i>
+
+                Travel Tips
+
+            </button>
+
+
+            <button
+                type="button"
+                class="blog-filter-btn"
+                data-filter="experiences">
+
+                <i class="fa-solid fa-mountain-sun"></i>
+
+                Experiences
+
+            </button>
+
+
+            <button
+                type="button"
+                class="blog-filter-btn"
+                data-filter="food">
+
+                <i class="fa-solid fa-utensils"></i>
+
+                Food &amp; Culture
+
+            </button>
+
+        </div>
+
+
+        <!-- RESULTS COUNT -->
+
+        <div class="blog-results-info">
+
+            <span id="blogResultsCount">
+                Showing 6 stories
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!--==================================
+            BLOG POSTS
+===================================-->
+
+<section class="all-blog-posts">
+
+    <div class="container">
+
+
+        <div
+            class="blog-grid"
+            id="blogGrid">
+
+
+            <!-- BLOG CARD 1 -->
+
+            <article
+                class="blog-card"
+                data-category="destinations"
+                data-name="london travel guide">
+
+                <div class="blog-card-image">
+
+                    <img
+                        src="images/blog/london-blog.jpg.jpg"
+                        alt="London travel guide"
+                        loading="lazy"
+                    >
+
+                    <span class="blog-card-category">
+                        Destinations
+                    </span>
+
+                </div>
+
+
+                <div class="blog-card-content">
+
+                    <div class="blog-card-meta">
+
+                        <span>
+                            <i class="fa-regular fa-calendar"></i>
+                            Travel Guide
+                        </span>
+
+                        <span>
+                            <i class="fa-regular fa-clock"></i>
+                            6 min read
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        The Ultimate London Travel Guide
+                    </h3>
+
+
+                    <p>
+                        Discover iconic landmarks, charming neighbourhoods,
+                        local experiences and practical tips for exploring London.
+                    </p>
+
+
+                    <a
+                        href="#"
+                        class="blog-read-more">
+
+                        Read Story
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- BLOG CARD 2 -->
+
+            <article
+                class="blog-card"
+                data-category="destinations"
+                data-name="edinburgh travel guide">
+
+                <div class="blog-card-image">
+
+                    <img
+                        src="images/blog/edinburgh-blog.jpg.jpg"
+                        alt="Edinburgh Scotland travel"
+                        loading="lazy"
+                    >
+
+                    <span class="blog-card-category">
+                        Destinations
+                    </span>
+
+                </div>
+
+
+                <div class="blog-card-content">
+
+                    <div class="blog-card-meta">
+
+                        <span>
+                            <i class="fa-regular fa-calendar"></i>
+                            Scotland
+                        </span>
+
+                        <span>
+                            <i class="fa-regular fa-clock"></i>
+                            5 min read
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Discover Edinburgh: A City of History
+                    </h3>
+
+
+                    <p>
+                        Explore Edinburgh Castle, historic streets, hidden
+                        corners and the unforgettable atmosphere of Scotland's capital.
+                    </p>
+
+
+                    <a
+                        href="#"
+                        class="blog-read-more">
+
+                        Read Story
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- BLOG CARD 3 -->
+
+            <article
+                class="blog-card"
+                data-category="travel-tips"
+                data-name="uk travel tips">
+
+                <div class="blog-card-image">
+
+                    <img
+                        src="images/blog/uk-travel-tips.jpg.jpg"
+                        alt="UK travel tips"
+                        loading="lazy"
+                    >
+
+                    <span class="blog-card-category">
+                        Travel Tips
+                    </span>
+
+                </div>
+
+
+                <div class="blog-card-content">
+
+                    <div class="blog-card-meta">
+
+                        <span>
+                            <i class="fa-solid fa-lightbulb"></i>
+                            Travel Tips
+                        </span>
+
+                        <span>
+                            <i class="fa-regular fa-clock"></i>
+                            7 min read
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        10 Essential Tips for Your First UK Trip
+                    </h3>
+
+
+                    <p>
+                        Learn simple ways to save money, plan transport,
+                        choose accommodation and enjoy a smoother British adventure.
+                    </p>
+
+
+                    <a
+                        href="#"
+                        class="blog-read-more">
+
+                        Read Story
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- BLOG CARD 4 -->
+
+            <article
+                class="blog-card"
+                data-category="experiences"
+                data-name="scottish highlands experience">
+
+                <div class="blog-card-image">
+
+                    <img
+                        src="images/blog/highlands-blog.jpg.jpg"
+                        alt="Scottish Highlands experience"
+                        loading="lazy"
+                    >
+
+                    <span class="blog-card-category">
+                        Experiences
+                    </span>
+
+                </div>
+
+
+                <div class="blog-card-content">
+
+                    <div class="blog-card-meta">
+
+                        <span>
+                            <i class="fa-solid fa-mountain-sun"></i>
+                            Adventure
+                        </span>
+
+                        <span>
+                            <i class="fa-regular fa-clock"></i>
+                            6 min read
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        A Scenic Escape to the Scottish Highlands
+                    </h3>
+
+
+                    <p>
+                        Experience dramatic mountains, peaceful lochs,
+                        scenic roads and some of Britain's most beautiful landscapes.
+                    </p>
+
+
+                    <a
+                        href="#"
+                        class="blog-read-more">
+
+                        Read Story
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- BLOG CARD 5 -->
+
+            <article
+                class="blog-card"
+                data-category="food"
+                data-name="british food afternoon tea">
+
+                <div class="blog-card-image">
+
+                    <img
+                        src="images/blog/british-food-blog.jpg.jpg"
+                        alt="Traditional British food and afternoon tea"
+                        loading="lazy"
+                    >
+
+                    <span class="blog-card-category">
+                        Food &amp; Culture
+                    </span>
+
+                </div>
+
+
+                <div class="blog-card-content">
+
+                    <div class="blog-card-meta">
+
+                        <span>
+                            <i class="fa-solid fa-utensils"></i>
+                            Food &amp; Culture
+                        </span>
+
+                        <span>
+                            <i class="fa-regular fa-clock"></i>
+                            5 min read
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        British Food Experiences You Should Try
+                    </h3>
+
+
+                    <p>
+                        From classic afternoon tea to traditional dishes and
+                        lively local markets, discover the flavours of Britain.
+                    </p>
+
+
+                    <a
+                        href="#"
+                        class="blog-read-more">
+
+                        Read Story
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- BLOG CARD 6 -->
+
+            <article
+                class="blog-card"
+                data-category="travel-tips"
+                data-name="best time visit uk">
+
+                <div class="blog-card-image">
+
+                    <img
+                        src="images/blog/scotland-blog.jpg.jpg"
+                        alt="Best time to visit the UK"
+                        loading="lazy"
+                    >
+
+                    <span class="blog-card-category">
+                        Travel Tips
+                    </span>
+
+                </div>
+
+
+                <div class="blog-card-content">
+
+                    <div class="blog-card-meta">
+
+                        <span>
+                            <i class="fa-solid fa-calendar-days"></i>
+                            Planning
+                        </span>
+
+                        <span>
+                            <i class="fa-regular fa-clock"></i>
+                            6 min read
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        What Is the Best Time to Visit Britain?
+                    </h3>
+
+
+                    <p>
+                        Compare the seasons, weather, crowds and travel experiences
+                        to choose the right time for your UK adventure.
+                    </p>
+
+
+                    <a
+                        href="#"
+                        class="blog-read-more">
+
+                        Read Story
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!--==================================
+            BLOG CTA
+===================================-->
+
+<section class="blog-cta">
+
+    <div class="container">
+
+        <div class="blog-cta-box">
+
+            <div>
+
+                <span>
+                    Plan Your Adventure
+                </span>
+
+
+                <h2>
+                    Your Next UK Story
+                    <strong>Starts Here.</strong>
+                </h2>
+
+
+                <p>
+                    Get inspired, choose your destination and
+                    start planning an unforgettable British journey.
+                </p>
+
+            </div>
+
+
+            <a
+                href="destinations.html"
+                class="blog-cta-button">
+
+                Explore Destinations
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!--==================================
+            FOOTER
+===================================-->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+
+            <!-- FOOTER BRAND -->
+
+            <div class="footer-brand">
+
+                <a
+                    href="index.html"
+                    class="logo">
+
+                    Explore<span>UK</span>
+
+                </a>
+
+
+                <p>
+
+                    Your trusted guide to discovering Britain's
+                    cities, culture, history and unforgettable experiences.
+
+                </p>
+
+
+                <div class="footer-social">
+
+                    <a
+                        href="#"
+                        aria-label="Facebook">
+
+                        <i class="fa-brands fa-facebook-f"></i>
+
+                    </a>
+
+
+                    <a
+                        href="#"
+                        aria-label="Instagram">
+
+                        <i class="fa-brands fa-instagram"></i>
+
+                    </a>
+
+
+                    <a
+                        href="#"
+                        aria-label="Pinterest">
+
+                        <i class="fa-brands fa-pinterest-p"></i>
+
+                    </a>
+
+
+                    <a
+                        href="#"
+                        aria-label="YouTube">
+
+                        <i class="fa-brands fa-youtube"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- EXPLORE -->
+
+            <div class="footer-column">
+
+                <h4>
+                    Explore
+                </h4>
+
+
+                <a href="index.html">
+                    Home
+                </a>
+
+
+                <a href="destinations.html">
+                    Destinations
+                </a>
+
+
+                <a href="attractions.html">
+                    Attractions
+                </a>
+
+
+                <a href="experiences.html">
+                    Experiences
+                </a>
+
+            </div>
+
+
+            <!-- TRAVEL -->
+
+            <div class="footer-column">
+
+                <h4>
+                    Travel
+                </h4>
+
+
+                <a href="guide.html">
+                    Travel Guide
+                </a>
+
+
+                <a href="blog.html">
+                    Travel Blog
+                </a>
+
+
+                <a href="#">
+                    Travel Tips
+                </a>
+
+
+                <a href="#">
+                    UK Itineraries
+                </a>
+
+            </div>
+
+
+            <!-- CONTACT -->
+
+            <div class="footer-column">
+
+                <h4>
+                    Contact
+                </h4>
+
+
+                <p>
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    hello@exploreuk.com
+
+                </p>
+
+
+                <p>
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    United Kingdom
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOOTER BOTTOM -->
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 ExploreUK. All Rights Reserved.
+            </p>
+
+
+            <div>
+
+                <a href="#">
+                    Privacy Policy
+                </a>
+
+
+                <a href="#">
+                    Terms &amp; Conditions
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!--==================================
+            JAVASCRIPT
+===================================-->
+
+<script src="js/script.js"></script>
+
+
+</body>
+
+</html>

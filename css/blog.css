@@ -1,0 +1,364 @@
+/*=========================================
+        BLOG FILTER & SEARCH
+=========================================*/
+
+.blog-filter-section{
+    padding:80px 0 35px;
+    background:#ffffff;
+}
+
+.blog-filter-header{
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    gap:50px;
+    margin-bottom:38px;
+}
+
+
+/*=========================================
+        FILTER TITLE
+=========================================*/
+
+.blog-filter-title{
+    max-width:650px;
+}
+
+.blog-filter-title .section-label{
+    display:inline-block;
+    margin-bottom:12px;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:#D4AF37;
+}
+
+.blog-filter-title h2{
+    margin:0 0 15px;
+    font-family:'Playfair Display',serif;
+    font-size:42px;
+    line-height:1.15;
+    color:#0B1F3A;
+}
+
+.blog-filter-title h2 span{
+    color:#D4AF37;
+}
+
+.blog-filter-title p{
+    margin:0;
+    max-width:600px;
+    color:#6B7280;
+    font-size:15px;
+    line-height:1.8;
+}
+
+
+/*=========================================
+        SEARCH BOX
+=========================================*/
+
+.blog-search-box{
+    position:relative;
+    width:360px;
+    min-width:300px;
+}
+
+.blog-search-box > i{
+    position:absolute;
+    left:20px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#8A94A6;
+    font-size:16px;
+    pointer-events:none;
+}
+
+.blog-search-box input{
+    width:100%;
+    height:56px;
+    padding:0 50px 0 50px;
+    border:1px solid #E5E7EB;
+    border-radius:50px;
+    outline:none;
+    background:#F8F9FA;
+    color:#1A1A1A;
+    font-family:'Poppins',sans-serif;
+    font-size:14px;
+    transition:all .3s ease;
+}
+
+.blog-search-box input::placeholder{
+    color:#9CA3AF;
+}
+
+.blog-search-box input:focus{
+    background:#ffffff;
+    border-color:#D4AF37;
+    box-shadow:0 8px 30px rgba(11,31,58,.08);
+}
+
+
+/*=========================================
+        CLEAR SEARCH BUTTON
+=========================================*/
+
+#clearSearch{
+    position:absolute;
+    right:15px;
+    top:50%;
+    transform:translateY(-50%);
+    width:32px;
+    height:32px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:0;
+    border-radius:50%;
+    background:transparent;
+    color:#9CA3AF;
+    cursor:pointer;
+    opacity:0;
+    visibility:hidden;
+    transition:all .25s ease;
+}
+
+#clearSearch:hover{
+    background:#F1F3F5;
+    color:#0B1F3A;
+}
+
+#clearSearch.show{
+    opacity:1;
+    visibility:visible;
+}
+
+
+/*=========================================
+        CATEGORY FILTERS
+=========================================*/
+
+.blog-filters{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+    padding:20px;
+    border:1px solid #EEF0F3;
+    border-radius:20px;
+    background:#FAFBFC;
+}
+
+.blog-filter-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:9px;
+    min-height:45px;
+    padding:0 20px;
+    border:1px solid #E2E5E9;
+    border-radius:50px;
+    background:#ffffff;
+    color:#4B5563;
+    font-family:'Poppins',sans-serif;
+    font-size:13px;
+    font-weight:600;
+    cursor:pointer;
+    transition:all .3s ease;
+}
+
+.blog-filter-btn i{
+    font-size:13px;
+}
+
+.blog-filter-btn:hover{
+    border-color:#D4AF37;
+    color:#0B1F3A;
+    transform:translateY(-2px);
+    box-shadow:0 7px 20px rgba(11,31,58,.08);
+}
+
+.blog-filter-btn.active{
+    background:#0B1F3A;
+    border-color:#0B1F3A;
+    color:#ffffff;
+    box-shadow:0 8px 22px rgba(11,31,58,.18);
+}
+
+.blog-filter-btn.active i{
+    color:#D4AF37;
+}
+
+
+/*=========================================
+        RESULTS COUNT
+=========================================*/
+
+.blog-results-info{
+    display:flex;
+    justify-content:flex-end;
+    margin-top:22px;
+    margin-bottom:25px;
+}
+
+#blogResultsCount{
+    font-size:13px;
+    font-weight:600;
+    color:#7B8494;
+}
+
+
+/*=========================================
+        BLOG CARD FILTER ANIMATION
+=========================================*/
+
+.blog-card{
+    transition:
+        opacity .35s ease,
+        transform .35s ease,
+        visibility .35s ease;
+}
+
+.blog-card.filter-hidden{
+    display:none;
+}
+
+
+/*=========================================
+        NO RESULTS MESSAGE
+=========================================*/
+
+.blog-no-results{
+    display:none;
+    grid-column:1 / -1;
+    padding:70px 20px;
+    text-align:center;
+}
+
+.blog-no-results.show{
+    display:block;
+}
+
+.blog-no-results-icon{
+    width:70px;
+    height:70px;
+    margin:0 auto 20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:#F8F9FA;
+    color:#D4AF37;
+    font-size:25px;
+}
+
+.blog-no-results h3{
+    margin:0 0 10px;
+    font-family:'Playfair Display',serif;
+    font-size:26px;
+    color:#0B1F3A;
+}
+
+.blog-no-results p{
+    margin:0;
+    color:#7B8494;
+    font-size:14px;
+}
+
+
+/*=========================================
+        RESPONSIVE
+=========================================*/
+
+@media(max-width:992px){
+
+    .blog-filter-header{
+        align-items:flex-start;
+        flex-direction:column;
+        gap:30px;
+    }
+
+    .blog-search-box{
+        width:100%;
+        max-width:500px;
+    }
+
+    .blog-filter-title h2{
+        font-size:36px;
+    }
+
+}
+
+
+@media(max-width:768px){
+
+    .blog-filter-section{
+        padding:60px 0 30px;
+    }
+
+    .blog-filter-header{
+        margin-bottom:28px;
+    }
+
+    .blog-filter-title h2{
+        font-size:32px;
+    }
+
+    .blog-filter-title p{
+        font-size:14px;
+    }
+
+    .blog-search-box{
+        max-width:none;
+    }
+
+    .blog-filters{
+        justify-content:flex-start;
+        padding:15px;
+        gap:9px;
+    }
+
+    .blog-filter-btn{
+        min-height:42px;
+        padding:0 15px;
+        font-size:12px;
+    }
+
+    .blog-results-info{
+        justify-content:flex-start;
+    }
+
+}
+
+
+@media(max-width:480px){
+
+    .blog-filter-section{
+        padding:45px 0 25px;
+    }
+
+    .blog-filter-title h2{
+        font-size:28px;
+    }
+
+    .blog-filter-title .section-label{
+        font-size:11px;
+        letter-spacing:1.5px;
+    }
+
+    .blog-search-box input{
+        height:52px;
+        font-size:13px;
+    }
+
+    .blog-filters{
+        border-radius:16px;
+    }
+
+    .blog-filter-btn{
+        width:100%;
+    }
+
+}
