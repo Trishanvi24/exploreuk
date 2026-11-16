@@ -18,7 +18,6 @@ if (header) {
 
 }
 
-
 /*=========================================
         HERO VIDEO SLIDER
         HOME PAGE ONLY
@@ -32,7 +31,6 @@ const prevBtn = document.querySelector(".prev-slide");
 
 let currentSlide = 0;
 let sliderInterval;
-
 
 /*-----------------------------------------
         CHECK SLIDER EXISTS
@@ -911,9 +909,6 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
     }
 
-    const blogCards = Array.from(
-        blogGrid.querySelectorAll(".blog-card")
-    );
 
     let activeCategory = "all";
 
@@ -929,6 +924,9 @@ document.addEventListener("DOMContentLoaded", function () {
             .trim();
 
         let visibleCount = 0;
+        const blogCards = Array.from(
+    blogGrid.querySelectorAll(".blog-card")
+);
 
 
         blogCards.forEach(function (card) {
@@ -987,6 +985,10 @@ document.addEventListener("DOMContentLoaded", function () {
         updateClearButton(searchTerm);
 
     }
+        document.addEventListener(
+        "exploreuk:blogs-loaded",
+        filterBlogs
+    );
 
 
     /*=========================================
@@ -1116,7 +1118,9 @@ document.addEventListener("DOMContentLoaded", function () {
             INITIAL RESULT
     =========================================*/
 
-    updateResultsCount(blogCards.length);
+    updateResultsCount(
+    blogGrid.querySelectorAll(".blog-card").length
+);
 
 });
 /*==================================
@@ -16135,6 +16139,146 @@ console.log(
     }
 
 })();
+
+
+/* ==========================================
+   EXPLOREUK - WORDPRESS BLOG POSTS
+========================================== */
+
+document.addEventListener("DOMContentLoaded", async function () {
+
+    const blogGrid = document.getElementById("blogGrid");
+
+    // Run only on Blog page
+    if (!blogGrid) {
+        return;
+    }
+
+    console.log("WordPress Blog integration started.");
+
+    try {
+
+        const response = await fetch(
+            "https://public-api.wordpress.com/rest/v1.1/sites/257049527/posts/?number=20&pretty=true"
+        );
+
+        if (!response.ok) {
+            throw new Error("WordPress API response failed.");
+        }
+
+        const data = await response.json();
+
+        const posts = (data.posts || []).filter(function (post) {
+            return post.status === "publish" &&
+                   post.type === "post" &&
+                   post.slug !== "hello-world";
+        });
+
+        if (!posts.length) {
+            console.log("No published WordPress blogs found.");
+            return;
+        }
+
+        // Create blog cards
+        const cards = posts.map(function (post) {
+
+            const card = document.createElement("article");
+            card.className = "blog-card";
+
+            const title = document.createElement("h3");
+            title.textContent = post.title || "ExploreUK Blog";
+
+            const excerpt = document.createElement("p");
+
+            const temp = document.createElement("div");
+            temp.innerHTML = post.excerpt || "";
+            excerpt.textContent = temp.textContent.trim();
+
+            const categoryNames = Object.keys(post.categories || {});
+            const categoryName = categoryNames[0] || "Destinations";
+
+            const categoryMap = {
+                "destinations": "destinations",
+                "travel tips": "travel-tips",
+                "travel-tips": "travel-tips",
+                "experiences": "experiences",
+                "food & culture": "food",
+                "food": "food"
+            };
+
+            const categorySlug =
+                categoryMap[categoryName.toLowerCase()] || "destinations";
+
+            card.dataset.category = categorySlug;
+            card.dataset.name = title.textContent + " " + excerpt.textContent;
+
+            const imageBox = document.createElement("div");
+            imageBox.className = "blog-card-image";
+
+            if (post.featured_image) {
+
+                const image = document.createElement("img");
+                image.src = post.featured_image;
+                image.alt = post.featured_image_alt || title.textContent;
+                image.loading = "lazy";
+
+                imageBox.appendChild(image);
+
+            }
+
+            const content = document.createElement("div");
+            content.className = "blog-card-content";
+
+            const category = document.createElement("span");
+            category.className = "blog-card-category";
+            category.textContent = categoryName;
+
+            const meta = document.createElement("div");
+            meta.className = "blog-card-meta";
+
+            if (post.date) {
+                meta.textContent = new Date(post.date).toLocaleDateString(
+                    "en-GB",
+                    { day: "numeric", month: "short", year: "numeric" }
+                );
+            }
+
+            const link = document.createElement("a");
+            link.className = "blog-read-more";
+            link.href = post.URL || post.url || "#";
+            link.textContent = "Read More";
+
+            content.appendChild(category);
+            content.appendChild(meta);
+            content.appendChild(title);
+            content.appendChild(excerpt);
+            content.appendChild(link);
+
+            card.appendChild(imageBox);
+            card.appendChild(content);
+
+            return card;
+
+        });
+
+        // Replace static cards only after successful API response
+        blogGrid.replaceChildren(...cards);
+
+        // Refresh search, filters and results count
+        document.dispatchEvent(
+            new Event("exploreuk:blogs-loaded")
+        );
+
+        console.log("WordPress blogs loaded:", posts.length);
+
+    } catch (error) {
+
+        console.error("WordPress Blog integration error:", error);
+
+    }
+
+});
+
 
 
 
