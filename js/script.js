@@ -1582,10 +1582,19 @@ document.addEventListener("DOMContentLoaded", function () {
 ===================================*/
 
 document.addEventListener("DOMContentLoaded", function () {
+    // Run this WordPress API only on Home page
+
+    if (
+        !window.location.pathname.endsWith("/") &&
+        !window.location.pathname.endsWith("/index.html")
+    ) {
+        return;
+    }
+
 
     const WP_API =
         "https://public-api.wordpress.com/rest/v1.1/sites/257049527/posts/?type=page&number=20";
-
+            
     fetch(WP_API)
         .then(function (response) {
 
@@ -1646,6 +1655,14 @@ document.addEventListener("DOMContentLoaded", function () {
 ===================================*/
 
 document.addEventListener("DOMContentLoaded", function () {
+        // Run this Hero WordPress connection only on Home page
+
+    if (
+        !window.location.pathname.endsWith("/") &&
+        !window.location.pathname.endsWith("/index.html")
+    ) {
+        return;
+    }
 
     const WP_HOME_API =
         "https://public-api.wordpress.com/rest/v1.1/sites/257049527/posts/?type=page&number=20";
@@ -1732,6 +1749,14 @@ document.addEventListener("DOMContentLoaded", function () {
 ===================================*/
 
 document.addEventListener("DOMContentLoaded", function () {
+        // Run only on Home page
+
+    if (
+        !window.location.pathname.endsWith("/") &&
+        !window.location.pathname.endsWith("/index.html")
+    ) {
+        return;
+    }
 
     const WP_PAGES_API =
         "https://public-api.wordpress.com/rest/v1.1/sites/257049527/posts/?type=page&number=20";
@@ -1811,6 +1836,14 @@ document.addEventListener("DOMContentLoaded", function () {
 ===================================*/
 
 document.addEventListener("DOMContentLoaded", function () {
+        // Run destination cards API only on Home page
+
+    if (
+        !window.location.pathname.endsWith("/") &&
+        !window.location.pathname.endsWith("/index.html")
+    ) {
+        return;
+    }
 
     const WP_API =
         "https://public-api.wordpress.com/rest/v1.1/sites/257049527/posts/?type=page&number=20";
@@ -16245,7 +16278,8 @@ document.addEventListener("DOMContentLoaded", async function () {
 
             const link = document.createElement("a");
             link.className = "blog-read-more";
-            link.href = post.URL || post.url || "#";
+            link.href = "blog-post.html?id=" + encodeURIComponent(post.ID);
+            console.log("BLOG POST ID:", post.ID, "ARTICLE LINK:", link.href);
             link.textContent = "Read More";
 
             content.appendChild(category);
