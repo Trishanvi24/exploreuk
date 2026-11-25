@@ -16278,7 +16278,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
             const link = document.createElement("a");
             link.className = "blog-read-more";
-            link.href = "blog-post.html?id=" + encodeURIComponent(post.ID);
+            link.href = "blog-post.html?slug=" + encodeURIComponent(post.slug);
             console.log("BLOG POST ID:", post.ID, "ARTICLE LINK:", link.href);
             link.textContent = "Read More";
 

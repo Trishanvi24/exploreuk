@@ -11,18 +11,21 @@
 
     try {
 const currentURL = new URL(window.location.href);
+
 const postId = currentURL.searchParams.get("id");
+const postSlug = currentURL.searchParams.get("slug");
 
 console.log("CURRENT PAGE URL:", currentURL.href);
 console.log("WORDPRESS POST ID:", postId);
+console.log("WORDPRESS POST SLUG:", postSlug);
 
-        if (!postId) {
-            throw new Error("Blog article ID is missing.");
-        }
+if (!postId && !postSlug) {
+    throw new Error("Blog article ID or slug is missing.");
+}
 
-        const API_URL =
-            `https://public-api.wordpress.com/rest/v1.1/sites/257049527/posts/${encodeURIComponent(postId)}`;
-
+        const API_URL = postId
+    ? `https://public-api.wordpress.com/rest/v1.1/sites/257049527/posts/${encodeURIComponent(postId)}`
+    : `https://public-api.wordpress.com/rest/v1.1/sites/257049527/posts/slug:${encodeURIComponent(postSlug)}`;
         const response = await fetch(API_URL);
 
         if (!response.ok) {
