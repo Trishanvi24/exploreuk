@@ -77,6 +77,50 @@ if (!postId && !postSlug) {
         blogPostContent.replaceChildren(article);
 
         document.title = post.title + " | ExploreUK";
+        // SEO META DESCRIPTION
+
+const metaDescription = document.querySelector(
+    'meta[name="description"]'
+);
+
+
+if (metaDescription) {
+
+    const descriptionText = post.excerpt
+        ? post.excerpt
+            .replace(/<[^>]*>/g, "")
+            .replace(/&#8217;|&#39;/g, "'")
+            .replace(/&#8216;/g, "'")
+            .replace(/&amp;/g, "&")
+            .replace(/&quot;/g, '"')
+            .replace(/&#8220;|&#8221;/g, '"')
+            .replace(/&nbsp;/g, " ")
+            .replace(/\s+/g, " ")
+            .trim()
+        : post.title + " - Read this travel guide on ExploreUK.";
+
+    metaDescription.setAttribute(
+        "content",
+        descriptionText.substring(0, 155)
+    );
+}
+
+
+// CANONICAL URL
+
+let canonicalLink = document.querySelector(
+    'link[rel="canonical"]'
+);
+
+if (!canonicalLink) {
+    canonicalLink = document.createElement("link");
+    canonicalLink.rel = "canonical";
+    document.head.appendChild(canonicalLink);
+}
+
+canonicalLink.href =
+    "https://trishanvi24.github.io/exploreuk/blog-post.html?slug=" +
+    encodeURIComponent(post.slug);
 
     } catch (error) {
 
